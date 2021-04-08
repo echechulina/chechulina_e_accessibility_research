@@ -6,6 +6,7 @@
     font-family: sans-serif;
   }
   
+  /* video */
   .player {
     width: 480px;
     margin: 10px auto;
@@ -49,6 +50,8 @@
   video {
     margin-bottom: -5px;
   }
+
+  /* tv */
 
   .player1 {
     width: 480px;
@@ -95,7 +98,7 @@
   }
 
 
-
+/* audio */
 
   .player2 {
     width: 480px;

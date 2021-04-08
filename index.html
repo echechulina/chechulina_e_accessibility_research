@@ -10,9 +10,9 @@
 <!-- video -->
   <section class="player">
     <video>
-      <source src="video/rabbit320.mp4" type="video/mp4">
-      <source src="video/rabbit320.webm" type="video/webm">
-      <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+      <source src="video/leon.mp4" type="video/mp4">
+        <track class="subtitlesText" kind="subtitles" src="video/leon.vtt" srclang="en" default>
+      <p>Your browser doesn't support HTML5 video. Here is a <a href="video/leon.mp4">link to the video</a> instead.</p>
     </video>
 
     <div class="controls">
@@ -20,6 +20,11 @@
       <button class="stop">Stop</button>
       <button class="rwd">Rwd</button>
       <button class="fwd">Fwd</button>
+      <button class="fsc">Fsc</button>
+      <button class="volume-btn">
+        <input class="volume" type="range" min="0" max="100">
+    </button>
+    <button class="subtitles" data-state="subtitles">Sbt</button>
       <div class="time">00:00</div>
     </div>
   </section>
@@ -27,9 +32,9 @@
 <!-- tv -->
   <section class="player1">
     <video id="video-1">
-      <source src="video/rabbit.mp4" type="video/mp4">
-      <source src="video/rabbit.webm" type="video/webm">
-      <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit.mp4">link to the video</a> instead.</p>
+      <source src="video/witcher.mp4" type="video/mp4">
+        <track class="subtitlesText" kind="subtitles" src="video/witcher.vtt" srclang="en" default>
+      <p>Your browser doesn't support HTML5 video. Here is a <a href="video/witcher.mp4">link to the video</a> instead.</p>
     </video>
 
     <div class="controls1">
@@ -37,17 +42,23 @@
       <button class="stop1">Stop</button>
       <button class="rwd1">Rwd</button>
       <button class="fwd1">Fwd</button>
+      <button class="fsc1">Fsc</button>
+      <button class="volume-btn">
+        <input class="volume1" type="range" min="0" max="100">
+    </button>
+    <button class="subtitles1" data-state="subtitles">Sbt</button>
       <div class="time1">00:00</div>
+
     </div>
   </section>
 
   <!-- audio -->
 
   <section class="player2">
-    <audio controls>
-      <source src="audio/arctic_monkeys.mp3" type="audio/mp3">
-      <source src="audio/arctic_monkeys.ogg" type="audio/ogg">
-      <p>Your browser doesn't support HTML5 audio. Here is a <a href="audio/arctic_monkeys.mp3">link to the audio</a> instead.</p>
+    <audio>
+      <source src="audio/joanne.mp3" type="audio/mp3">
+      <source src="audio/joanne.ogg" type="audio/ogg">
+      <p>Your browser doesn't support HTML5 audio. Here is a <a href="audio/joanne.mp3">link to the audio</a> instead.</p>
     </audio>
 
     <div class="controls2">
@@ -55,6 +66,9 @@
       <button class="stop2">Stop</button>
       <button class="rwd2">Rwd</button>
       <button class="fwd2">Fwd</button>
+      <button class="volume-btn">
+        <input class="volume2" type="range" min="0" max="100">
+    </button>
       <div class="time2">00:00</div>
     </div>
   </section>
