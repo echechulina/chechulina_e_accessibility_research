@@ -1,66 +1,68 @@
 // video
-const playPauseBtn = document.querySelector('.playpause');
-const stopBtn = document.querySelector('.stop');
-const rwdBtn = document.querySelector('.rwd');
-const fwdBtn = document.querySelector('.fwd');
-const timeLabel = document.querySelector('.time');
-const player = document.querySelector('video');
-const fsc = document.querySelector('.fsc');
-const volume = document.querySelector('.volume');
+const playPauseBtnVO = document.querySelector('.playpause-vo-btn');
+const stopBtnVO = document.querySelector('.stop-vo-btn');
+const rwdBtnVO = document.querySelector('.rwd-vo-btn');
+const fwdBtnVO = document.querySelector('.fwd-vo-btn');
+const timeLabelVO = document.querySelector('.time-vo-btn');
+const playerVO = document.querySelector('#videoOne');
+const fscVO = document.querySelector('.fsc-vo-btn');
+const volumeVO = document.querySelector('.volume-vo-btn');
 
-const btnsubtitles = document.querySelector('.subtitles');
+const btnsubtitlesVO = document.querySelector('.subtitles-vo-btn');
 
-const subtitles  = player.textTracks[0]; 
-subtitles.mode = 'hidden';
+const subtitlesVO  = playerVO.textTracks[0]; 
+subtitlesVO.mode = 'hidden';
 
-btnsubtitles.onclick = function(){
-    subtitles.mode = 'showing';
+// subtitles
+btnsubtitlesVO.onclick = function(){
+    subtitlesVO.mode = 'showing';
 }
 
-fsc.onclick = function (){
-    if(player.requestFullscreen){
-        player.requestFullscreen();
+// open full screen
+fscVO.onclick = function (){
+    if(playerVO.requestFullscreen){
+        playerVO.requestFullscreen();
     }
 }
 
 // volume doesn't work properly
-volume.onclick = function () {
-    player.volume = volume.value / volume.max;
+volumeVO.onclick = function () {
+    playerVO.volume = volumeVO.value / volumeVO.max;
   };
 
 
-playPauseBtn.onclick = function() {
-    if(player.paused) {
-      player.play();
-      playPauseBtn.textContent = 'Pause';
+playPauseBtnVO.onclick = function() {
+    if(playerVO.paused) {
+      playerVO.play();
+      playPauseBtnVO.textContent = 'Pause';
     } else {
-      player.pause();
-      playPauseBtn.textContent = 'Play';
+      playerVO.pause();
+      playPauseBtnVO.textContent = 'Play';
     }
   };
 
-  stopBtn.onclick = function() {
-    player.pause();
-    player.currentTime = 0;
-    playPauseBtn.textContent = 'Play';
+  stopBtnVO.onclick = function() {
+    playerVO.pause();
+    playerVO.currentTime = 0;
+    playPauseBtnVO.textContent = 'Play';
   };
 
-  rwdBtn.onclick = function() {
-    player.currentTime -= 3;
+  rwdBtnVO.onclick = function() {
+    playerVO.currentTime -= 3;
   };
   
-  fwdBtn.onclick = function() {
-    player.currentTime += 3;
-    if(player.currentTime >= player.duration || player.paused) {
-      player.pause();
-      player.currentTime = 0;
-      playPauseBtn.textContent = 'Play';
+  fwdBtnVO.onclick = function() {
+    playerVO.currentTime += 3;
+    if(playerVO.currentTime >= playerVO.duration || playerVO.paused) {
+      playerVO.pause();
+      playerVO.currentTime = 0;
+      playPauseBtnVO.textContent = 'Play';
     }
   };
 
-  player.ontimeupdate = function() {
-    let minutes = Math.floor(player.currentTime / 60);
-    let seconds = Math.floor(player.currentTime - minutes * 60);
+  playerVO.ontimeupdate = function() {
+    let minutes = Math.floor(playerVO.currentTime / 60);
+    let seconds = Math.floor(playerVO.currentTime - minutes * 60);
     let minuteValue;
     let secondValue;
   
@@ -77,77 +79,77 @@ playPauseBtn.onclick = function() {
     }
   
     mediaTime = minuteValue + ":" + secondValue;
-    timeLabel.textContent = mediaTime;
+    timeLabelVO.textContent = mediaTime;
   };
 
  
 
 // tv
-const playPauseBtn1 = document.querySelector('.playpause1');
-const stopBtn1 = document.querySelector('.stop1');
-const rwdBtn1 = document.querySelector('.rwd1');
-const fwdBtn1 = document.querySelector('.fwd1');
-const timeLabel1 = document.querySelector('.time1');
-const player1 = document.querySelector('#video-1');
-const fsc1 = document.querySelector('.fsc1');
-const volume1 = document.querySelector('.volume1');
+const playPauseBtnVT = document.querySelector('.playpause-vt-btn');
+const stopBtnVT = document.querySelector('.stop-vt-btn');
+const rwdBtnVT = document.querySelector('.rwd-vt-btn');
+const fwdBtnVT = document.querySelector('.fwd-vt-btn');
+const timeLabelVT = document.querySelector('.time-vt-btn');
+const playerVT = document.querySelector('#videoTwo');
+const fscVT = document.querySelector('.fsc-vt-btn');
+const volumeVT = document.querySelector('.volume-vt-btn');
 
-const btnsubtitles1 = document.querySelector('.subtitles1');
+const btnsubtitlesVT = document.querySelector('.subtitles-vt-btn');
 
-const subtitles1  = player1.textTracks[0]; 
-subtitles1.mode = 'hidden';
+const subtitlesVT  = playerVT.textTracks[0]; 
+subtitlesVT.mode = 'hidden';
 
-btnsubtitles1.onclick = function(){
-    subtitles1.mode = 'showing';
+btnsubtitlesVT.onclick = function(){
+    subtitlesVT.mode = 'showing';
 }
 
 
-fsc1.onclick = function (){
-    if(player1.requestFullscreen){
-        player1.requestFullscreen();
+fscVT.onclick = function (){
+    if(playerVT.requestFullscreen){
+        playerVT.requestFullscreen();
     }
 }
 
 
 // volume doesn't work properly
-volume1.onclick = function () {
-    player1.volume = volume1.value / volume1.max;
+volumeVT.onclick = function () {
+    playerVT.volume = volumeVT.value / volumeVT.max;
   };
 
 
 
-playPauseBtn1.onclick = function() {
-    if(player1.paused) {
-      player1.play();
-      playPauseBtn1.textContent = 'Pause';
+playPauseBtnVT.onclick = function() {
+    if(playerVT.paused) {
+      playerVT.play();
+      playPauseBtnVT.textContent = 'Pause';
     } else {
-      player1.pause();
-      playPauseBtn1.textContent = 'Play';
+      playerVT.pause();
+      playPauseBtnVT.textContent = 'Play';
     }
   };
 
-  stopBtn1.onclick = function() {
-    player1.pause();
-    player1.currentTime = 0;
-    playPauseBtn1.textContent = 'Play';
+  stopBtnVT.onclick = function() {
+    playerVT.pause();
+    playerVT.currentTime = 0;
+    playPauseBtnVT.textContent = 'Play';
   };
 
-  rwdBtn1.onclick = function() {
-    player1.currentTime -= 3;
+  rwdBtnVT.onclick = function() {
+    playerVT.currentTime -= 3;
   };
   
-  fwdBtn1.onclick = function() {
-    player1.currentTime += 3;
-    if(player1.currentTime >= player1.duration || player1.paused) {
-      player1.pause();
-      player1.currentTime = 0;
-      playPauseBtn1.textContent1 = 'Play';
+  fwdBtnVT.onclick = function() {
+    playerVT.currentTime += 3;
+    if(playerVT.currentTime >= playerVT.duration || playerVT.paused) {
+      playerVT.pause();
+      playerVT.currentTime = 0;
+      playPauseBtnVT.textContent1 = 'Play';
     }
   };
 
-  player1.ontimeupdate = function() {
-    let minutes = Math.floor(player1.currentTime / 60);
-    let seconds = Math.floor(player1.currentTime - minutes * 60);
+  playerVT.ontimeupdate = function() {
+    let minutes = Math.floor(playerVT.currentTime / 60);
+    let seconds = Math.floor(playerVT.currentTime - minutes * 60);
     let minuteValue;
     let secondValue;
   
@@ -164,58 +166,59 @@ playPauseBtn1.onclick = function() {
     }
   
     mediaTime = minuteValue + ":" + secondValue;
-    timeLabel.textContent = mediaTime;
+    timeLabelVT.textContent = mediaTime;
   };
 
   
 // audio
 
-const playPauseBtn2 = document.querySelector('.playpause2');
-const stopBtn2 = document.querySelector('.stop2');
-const rwdBtn2 = document.querySelector('.rwd2');
-const fwdBtn2 = document.querySelector('.fwd2');
-const timeLabel2 = document.querySelector('.time2');
-const player2 = document.querySelector('audio');
-const volume2 = document.querySelector('.volume2');
+const playPauseBtnAU = document.querySelector('.playpause-au-btn');
+const stopBtnAU = document.querySelector('.stop-au-btn');
+const rwdBtnAU = document.querySelector('.rwd-au-btn');
+const fwdBtnAU = document.querySelector('.fwd-au-btn');
+const timeLabelAU = document.querySelector('.time-au-btn');
+const playerAU = document.querySelector('#audioPlayer');
+const volumeAU = document.querySelector('.volume-au-btn');
 
 // volume doesn't work properly
-volume2.onclick = function () {
-    player2.volume = volume2.value / volume2.max;
+volumeAU.onclick = function () {
+    playerAU.volume = volumeAU.value / volumeAU.max;
   };
-// Define constructor for player controls object
 
-playPauseBtn2.onclick = function() {
-  if(player2.paused) {
-    player2.play();
-    playPauseBtn2.textContent = 'Pause';
+
+
+playPauseBtnAU.onclick = function() {
+  if(playerAU.paused) {
+    playerAU.play();
+    playPauseBtnAU.textContent = 'Pause';
   } else {
-    player2.pause();
-    playPauseBtn2.textContent = 'Play';
+    playerAU.pause();
+    playPauseBtnAU.textContent = 'Play';
   }
 };
 
-stopBtn2.onclick = function() {
-  player2.pause();
-  player2.currentTime = 0;
-  playPauseBtn2.textContent = 'Play';
+stopBtnAU.onclick = function() {
+  playerAU.pause();
+  playerAU.currentTime = 0;
+  playPauseBtnAU.textContent = 'Play';
 };
 
-rwdBtn2.onclick = function() {
-  player2.currentTime -= 3;
+rwdBtnAU.onclick = function() {
+  playerAU.currentTime -= 3;
 };
 
-fwdBtn2.onclick = function() {
-  player2.currentTime += 3;
-  if(player2.currentTime >= player2.duration || player2.paused) {
-    player2.pause();
-    player2.currentTime = 0;
-    playPauseBtn2.textContent = 'Play';
+fwdBtnAU.onclick = function() {
+  playerAU.currentTime += 3;
+  if(playerAU.currentTime >= playerAU.duration || playerAU.paused) {
+    playerAU.pause();
+    playerAU.currentTime = 0;
+    playPauseBtnAU.textContent = 'Play';
   }
 };
 
-player2.ontimeupdate = function() {
-  let minutes = Math.floor(player2.currentTime / 60);
-  let seconds = Math.floor(player2.currentTime - minutes * 60);
+playerAU.ontimeupdate = function() {
+  let minutes = Math.floor(playerAU.currentTime / 60);
+  let seconds = Math.floor(playerAU.currentTime - minutes * 60);
   let minuteValue;
   let secondValue;
 
@@ -232,7 +235,7 @@ player2.ontimeupdate = function() {
   }
 
   mediaTime = minuteValue + ":" + secondValue;
-  timeLabel2.textContent = mediaTime;
+  timeLabelAU.textContent = mediaTime;
 };
 
 // Control transcript display
