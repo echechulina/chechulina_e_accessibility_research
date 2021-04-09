@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: sans-serif;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  h1 {
+      color:#fff;
+  }
+    h2{
+        text-align: center;
+        color: #5c144acc;;
+    }
+  .mainHeader {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: #5c144acc;
+    .logo{
+        width: 100px;
+    }
+  }
+
+  .video_players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .audioPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5c144acc;
+    .music{
+        color: #fff;
+    }
+    .artist{
+       color: #fff;
+       margin-top: 0px;
+    }
+    
+  }
+  
+  /* video */
+  .playerVideoOne, .playerVideoTwo {
+    width: 600px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 15px rgb(0, 0, 0, 0.6);
+  }
+  
+  video, audio, .controlsVideoOne {
+    width: 100%;
+  }
+  
+  .controlsVideoOne, .controlsVideoTwo, .controlsAudio {
+    height: 50px;
+  }
+  
+  button {
+    display: block;
+    float: left;
+    border: 0;
+    margin-right: 2px;
+    height: 100%;
+    width: 60px;
+    cursor: pointer;
+    background-color: #5c144a3b;
+     
+  }
+  .playpause-au-btn, .stop-au-btn, .rwd-au-btn, .fwd-au-btn, .volumeAu{
+    background-color: #d3acc9a9;
+}
+
+  .volumeVT, .volumeVO, .volumeAu{
+    width: 150px;
+  }
+.time-vo-btn, .time-vt-btn, .time-au-btn {
+    text-align: center;
+    padding-top:20px;
+    height: auto;
+}
+
+  
+  button:hover, button:focus {
+    background-color: rgb(253, 234, 234);
+  }
+  
+  button:active {
+    background-color: rgb(189, 187, 187);
+  }
+  
+  .controls div {
+    font-size: 12px;
+    display: inline-block;
+    line-height: 36px;
+    width: 45px;
+    float: right;
+  }
+  
+  video {
+    margin-bottom: -5px;
+  }
+
+  
+
+/* audio */
+
+  .controlsAudio {
+    width: 480px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 15px rgb(0, 0, 0, 0.6);
+  }
+
+  .transcript-button{
+    background-color: #d3acc9a9;
+  }
+  
+  .transcript-control{
+      background-color: #fff;
+  }
+  
+  .transcript-container {
+    width: 480px;
+    margin: 10px auto;
+    border: 1px solid #d3acc9a9;
+    min-height: 38px;
+    box-shadow: 0 8px 15px rgb(0, 0, 0, 0.6);
+  }
+
+  .transcript {
+    height: 0;
+    width: 100%;
+    overflow: auto;
+    padding: 0 10px;
+    background-color: #fff;
+  }
+
+  .transcript-container button {
+    width: 100%;
+    height: 36px;
+  }

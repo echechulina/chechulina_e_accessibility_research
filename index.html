@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Accessibility Research Project</title>
+    <link href="css/master.css" rel="stylesheet">
+  </head>
+  <body>
+      <header class="mainHeader">
+          <img class="logo" src="images/roku.svg" alt="Roku logo">
+         
+          <h1>Online Cinema</h1>
+ 
+      </header>
+
+      <main>
+        <h2 class="header">Movie and TV Show</h2>
+
+      <!-- video content -->
+      <div class="video_players">
+        
+          <!-- video -->
+        <div class="movie">
+          <h2>Leon</h2>
+          <section class="playerVideoOne">
+            <video id="videoOne">
+              <source src="video/leon.mp4" type="video/mp4">
+                <track class="subtitlesText" kind="subtitles" src="video/leon.vtt" srclang="en" default>
+              <p>Your browser doesn't support HTML5 video. Here is a <a href="video/leon.mp4">link to the video</a> instead.</p>
+            </video>
+
+            <div class="controlsVideoOne">
+              <button class="playpause-vo-btn">Play</button>
+              <button class="stop-vo-btn">Stop</button>
+              <button class="rwd-vo-btn">Back</button>
+              <button class="fwd-vo-btn">Forward</button>
+
+              <button class="volumeVO">
+                <input class="volume-vo-btn" type="range" min="0" max="100">
+              </button>
+
+              <button class="subtitles-vo-btn" data-state="subtitles">Subtitles</button>
+              <button class="fsc-vo-btn">Full Screen</button>
+              <div class="time-vo-btn">00:00</div>
+             
+            </div>
+          </section>
+        </div>
+        <!-- tv -->
+        <div class="tv">
+          <h2>The Witcher</h2>
+          <section class="playerVideoTwo">
+            <video id="videoTwo">
+              <source src="video/witcher.mp4" type="video/mp4">
+                <track class="subtitlesText" kind="subtitles" src="video/witcher.vtt" srclang="en" default>
+              <p>Your browser doesn't support HTML5 video. Here is a <a href="video/witcher.mp4">link to the video</a> instead.</p>
+            </video>
+
+            <div class="controlsVideoTwo">
+              <button class="playpause-vt-btn">Play</button>
+              <button class="stop-vt-btn">Stop</button>
+              <button class="rwd-vt-btn">Back</button>
+              <button class="fwd-vt-btn">Forward</button>
+
+
+              <button class="volumeVT">
+                <input class="volume-vt-btn" type="range" min="0" max="100">
+              </button>
+
+              <button class="subtitles-vt-btn" data-state="subtitles">Subtitles</button>
+              <button class="fsc-vt-btn">Full Screen</button>
+              <div class="time-vt-btn">00:00</div>
+
+            </div>
+          </section>
+        </div>
+    </div>
+
+
+      <!-- audio -->
+      <div class="audioPlace">
+      <h2 class="music">Listen to music</h2>
+      <h3 class="artist">Lady Gaga - Joanne</h3>
+      <section class="audio">
+        <audio id="audioPlayer">
+          <source src="audio/joanne.mp3" type="audio/mp3">
+          <source src="audio/joanne.ogg" type="audio/ogg">
+          <p>Your browser doesn't support HTML5 audio. Here is a <a href="audio/joanne.mp3">link to the audio</a> instead.</p>
+        </audio>
+
+        <div class="controlsAudio">
+          <button class="playpause-au-btn">Play</button>
+          <button class="stop-au-btn">Stop</button>
+          <button class="rwd-au-btn">Back</button>
+          <button class="fwd-au-btn">Forward</button>
+
+          <button class="volumeAu">
+            <input class="volume-au-btn" type="range" min="0" max="100">
+          </button>
+
+          <div class="time-au-btn">00:00</div>
+          </div>
+      </section>
+      <div class="transcript-container">
+        <div class="transcript-control">
+          <button class="transcript-button">Show transcript</button>
+        </div>
+        <section class="transcript">
+          <p>Take my hand, stay Joanne</p>
+          <p>Heaven's not</p>
+          <p>Ready for you</p>
+          <p>Every part</p>
+          <p>Of my aching heart</p>
+          <p>Needs you more</p>
+          <p>Than the angels do</p>
+           
+          <p>Girl</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Going, girl?</p>
+          <p>Girl</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Going, girl?</p>
+           
+          <p>If you could</p>
+          <p>I know that you'd stay</p>
+          <p>We both know</p>
+          <p>Things don't work that way</p>
+          <p>I promised I</p>
+          <p>Wouldn't say goodbye</p>
+          <p>So I grin</p>
+          <p>And my voice gets thin</p>
+           
+          <p>Girl</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Going, girl?</p>
+          <p>Girl</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Going, girl?</p>
+           
+          <p>Honestly I know where you're goin'</p>
+          <p>And baby you're just movin' on</p>
+          <p>And I'll still love you even if I can't</p>
+          <p>See you anymore</p>
+          <p>Can't wait to see you soar</p>
+           
+          <p>Girl</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Going, girl?</p>
+          <p>Girl</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Where do you think you're goin'?</p>
+          <p>Going, girl?</p>
+          
+        </section>
+
+      </div>
+    </div>
+</main>
+      <script src="js/main.js"></script>
+  </body>
+</html>
